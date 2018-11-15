@@ -5,7 +5,7 @@
 
 //variables 
 PImage RBG;
-
+PFont f;
 
 
 void setup() {
@@ -13,6 +13,8 @@ void setup() {
   size(1600, 900);
   frameRate(10);
   
+  f = createFont("AbrilFatface-Regular.ttf", 300);
+  textFont(f);
   
 
 }
@@ -45,7 +47,20 @@ updatePixels();
   rect(x,y,random(mouseX), random(20));
  }
 
-
+text("RESPECT", 50, height/2);
 
     
+}
+
+void mousePressed()  {
+  
+  float w = random(width);
+  float h = random(height); 
+  
+  scale(random(1.2));
+  text("WOMEN", w,h );
+  
+  h++;
+ 
+  
 }
